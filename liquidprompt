@@ -1701,7 +1701,7 @@ _lp_set_prompt()
     # As this get the last returned code, it should be called first
     local -i err=$?
     if (( err != 0 )); then
-        LP_ERR=" $LP_COLOR_ERR$err$NO_COL"
+        LP_ERR="$LP_COLOR_ERR$err$NO_COL "
     else
         LP_ERR=''     # Hidden
     fi
@@ -1747,7 +1747,7 @@ _lp_set_prompt()
         LP_SCLS=
     fi
 
-    LP_RUNTIME=$(_lp_sl "$(_lp_runtime)")
+    LP_RUNTIME=$(_lp_sr "$(_lp_runtime)")
 
     # if change of working directory
     if [[ "${LP_OLD_PWD-}" != "LP:$PWD" ]]; then
