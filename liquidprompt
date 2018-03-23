@@ -1403,6 +1403,9 @@ _lp_color_map() {
 # runtime of last command #
 ###########################
 
+typeset -i _LP_RUNTIME_SECONDS
+typeset -i _LP_RUNTIME_LAST_SECONDS
+
 _LP_RUNTIME_LAST_SECONDS=$SECONDS
 
 _lp_runtime()
